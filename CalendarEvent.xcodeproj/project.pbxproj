@@ -15,6 +15,7 @@
 		14B0845C1F7175970083F983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B0845A1F7175970083F983 /* LaunchScreen.storyboard */; };
 		14B084651F7175C40083F983 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B084641F7175C40083F983 /* EventKit.framework */; };
 		14B71B431F8214BC0002ECF3 /* CalendarReminderEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B71B421F8214BC0002ECF3 /* CalendarReminderEvent.m */; };
+		14B71B461F8227D20002ECF3 /* calendar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 14B71B451F8227D20002ECF3 /* calendar.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		14B084641F7175C40083F983 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		14B71B411F8214BC0002ECF3 /* CalendarReminderEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarReminderEvent.h; sourceTree = "<group>"; };
 		14B71B421F8214BC0002ECF3 /* CalendarReminderEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarReminderEvent.m; sourceTree = "<group>"; };
+		14B71B451F8227D20002ECF3 /* calendar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = calendar.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		14B084401F7175960083F983 = {
 			isa = PBXGroup;
 			children = (
+				14B71B441F8227D20002ECF3 /* ScreenShot */,
 				14B0844B1F7175960083F983 /* CalendarEvent */,
 				14B0844A1F7175960083F983 /* Products */,
 				14B084631F7175C40083F983 /* Frameworks */,
@@ -102,6 +105,14 @@
 				14B71B421F8214BC0002ECF3 /* CalendarReminderEvent.m */,
 			);
 			path = CalendarKit;
+			sourceTree = "<group>";
+		};
+		14B71B441F8227D20002ECF3 /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				14B71B451F8227D20002ECF3 /* calendar.jpeg */,
+			);
+			path = ScreenShot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				14B0845C1F7175970083F983 /* LaunchScreen.storyboard in Resources */,
 				14B084591F7175970083F983 /* Assets.xcassets in Resources */,
 				14B084571F7175960083F983 /* Main.storyboard in Resources */,
+				14B71B461F8227D20002ECF3 /* calendar.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
