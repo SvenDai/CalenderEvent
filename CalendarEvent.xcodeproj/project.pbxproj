@@ -13,6 +13,8 @@
 		14B084571F7175960083F983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B084551F7175960083F983 /* Main.storyboard */; };
 		14B084591F7175970083F983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B084581F7175970083F983 /* Assets.xcassets */; };
 		14B0845C1F7175970083F983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B0845A1F7175970083F983 /* LaunchScreen.storyboard */; };
+		14B084651F7175C40083F983 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B084641F7175C40083F983 /* EventKit.framework */; };
+		14B71B431F8214BC0002ECF3 /* CalendarReminderEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B71B421F8214BC0002ECF3 /* CalendarReminderEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		14B084581F7175970083F983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B0845B1F7175970083F983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B0845D1F7175970083F983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14B084641F7175C40083F983 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		14B71B411F8214BC0002ECF3 /* CalendarReminderEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarReminderEvent.h; sourceTree = "<group>"; };
+		14B71B421F8214BC0002ECF3 /* CalendarReminderEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarReminderEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B084651F7175C40083F983 /* EventKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 			children = (
 				14B0844B1F7175960083F983 /* CalendarEvent */,
 				14B0844A1F7175960083F983 /* Products */,
+				14B084631F7175C40083F983 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +65,11 @@
 		14B0844B1F7175960083F983 /* CalendarEvent */ = {
 			isa = PBXGroup;
 			children = (
+				14B71B401F8214BC0002ECF3 /* CalendarKit */,
 				14B0844F1F7175960083F983 /* AppDelegate.h */,
 				14B084501F7175960083F983 /* AppDelegate.m */,
 				14B084521F7175960083F983 /* ViewController.h */,
 				14B084531F7175960083F983 /* ViewController.m */,
-				14B084551F7175960083F983 /* Main.storyboard */,
-				14B084581F7175970083F983 /* Assets.xcassets */,
-				14B0845A1F7175970083F983 /* LaunchScreen.storyboard */,
-				14B0845D1F7175970083F983 /* Info.plist */,
 				14B0844C1F7175960083F983 /* Supporting Files */,
 			);
 			path = CalendarEvent;
@@ -74,9 +78,30 @@
 		14B0844C1F7175960083F983 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				14B0845D1F7175970083F983 /* Info.plist */,
+				14B0845A1F7175970083F983 /* LaunchScreen.storyboard */,
+				14B084581F7175970083F983 /* Assets.xcassets */,
+				14B084551F7175960083F983 /* Main.storyboard */,
 				14B0844D1F7175960083F983 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14B084631F7175C40083F983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14B084641F7175C40083F983 /* EventKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14B71B401F8214BC0002ECF3 /* CalendarKit */ = {
+			isa = PBXGroup;
+			children = (
+				14B71B411F8214BC0002ECF3 /* CalendarReminderEvent.h */,
+				14B71B421F8214BC0002ECF3 /* CalendarReminderEvent.m */,
+			);
+			path = CalendarKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B71B431F8214BC0002ECF3 /* CalendarReminderEvent.m in Sources */,
 				14B084541F7175960083F983 /* ViewController.m in Sources */,
 				14B084511F7175960083F983 /* AppDelegate.m in Sources */,
 				14B0844E1F7175960083F983 /* main.m in Sources */,
@@ -314,6 +340,7 @@
 				14B084621F7175970083F983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
