@@ -56,4 +56,49 @@
     }
     
 }
+
+
+- (NSArray*)checkEvent{
+    EKEventStore *store = [[EKEventStore alloc]init];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    
+    // 创建起始日期组件
+    NSDateComponents *oneDayAgoComponents = [[NSDateComponents alloc] init];
+    oneDayAgoComponents.day = -1;
+    NSDate *oneDayAgo = [calendar dateByAddingComponents:oneDayAgoComponents
+                                                  toDate:[NSDate date]
+                                                 options:0];
+    // 创建结束日期组件
+    NSDateComponents *oneMonthFromNowComponents = [[NSDateComponents alloc] init];
+    oneMonthFromNowComponents.month = 1;
+    NSDate *oneMonthFromNow = [calendar dateByAddingComponents:oneMonthFromNowComponents
+                                                        toDate:[NSDate date]
+                                                       options:0];
+    
+    NSArray *tempA = [store calendarsForEntityType:EKEntityTypeEvent];
+    NSMutableArray *calenderArr = [NSMutableArray array];
+    for (EKCalendar *calendar in tempA) {
+        EKCalendarType type = calendar.type;
+        if (type == EKCalendarTypeLocal || type == EKCalendarTypeCalDAV) {
+            [calenderArr addObject:calendar];
+        }
+    }
+    // 用事件库的实例方法创建谓词。表示 找出从当前时间前一天到当前时间的一个月后的时间范围的所有typesArray里类型的日历事件
+    NSPredicate*predicate = [store predicateForEventsWithStartDate:oneDayAgo endDate:oneMonthFromNow calendars:calenderArr];
+    NSArray *eventArray = [store eventsMatchingPredicate:predicate];
+    return eventArray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @end

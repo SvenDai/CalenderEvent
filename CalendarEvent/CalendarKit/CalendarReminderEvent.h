@@ -29,4 +29,11 @@
  */
 -(void) createCalendarEventWithTitle:(NSString*) title location:(NSString*)location startDate:(NSDate*)sDate EndDate:(NSDate*)eDate allDay:(BOOL) isAllDay remindAlarm:(NSArray*) alarmArray;
 
+/**
+ checkout all calender
+
+ @return calender array
+ */
+- (NSArray*)checkEvent;
+
 @end
